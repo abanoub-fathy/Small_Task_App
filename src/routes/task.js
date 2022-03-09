@@ -1,6 +1,8 @@
-const express = require("express");
-const router = express.Router();
+const { Router } = require("express");
 const taskController = require("../controllers/task");
+
+// create new Router
+const router = Router();
 
 // all tasks
 router.get("/", taskController.getAllTasks);

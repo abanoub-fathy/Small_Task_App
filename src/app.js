@@ -1,8 +1,11 @@
 require("dotenv").config();
 const express = require("express");
-const app = express();
+
+// connect to the db
+require("./db/db");
 
 // app configuration
+const app = express();
 app.use(express.json());
 
 // routes
