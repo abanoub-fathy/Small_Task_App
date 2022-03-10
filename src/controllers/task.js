@@ -85,7 +85,7 @@ const deleteTask = async (req, res) => {
       return res.status(400).send({ error: "Not valid id" });
     }
 
-    // get the task to update
+    // get the task to delete
     const task = await Task.findById(req.params.id);
 
     if (!task) {

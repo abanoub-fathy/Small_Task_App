@@ -10,6 +10,7 @@ app.use(express.json());
 
 // routes
 app.use("/api/v1/tasks", require("./routes/task"));
+app.use(require("./middlewares/not-found"));
 
 app.listen(
   process.env.PORT,
